@@ -120,7 +120,7 @@ export default function Contact() {
               animationDelay: `${Math.random() * 10}s`,
             }}
           >
-            {["CONTACT", "NEWS", "CONNECT", "BREAKING"][i % 4]}
+            {["CONTACT", "CONNECT",][i % 4]}
           </span>
         ))}
       </div>

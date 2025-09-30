@@ -8,27 +8,28 @@ import {
   FaCss3Alt,
   FaGitAlt,
 } from "react-icons/fa";
-import { SiTypescript, SiSolidity, SiMongodb, SiFlask, SiNextdotjs, SiDjango } from "react-icons/si";
+import { SiTypescript, SiSolidity, SiMongodb, SiFlask, SiNextdotjs, SiDjango, SiPostgresql } from "react-icons/si";
 
 export default function TechStack() {
   const tech = [
     { name: "JavaScript (ES6+)", icon: <FaReact className="text-sky-500" /> },
     { name: "Python", icon: <FaPython className="text-yellow-500" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
     { name: "C", icon: <span className="font-bold"></span> },
     { name: "SQL", icon: <span className="font-bold"></span> },
     { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-600" /> },
     { name: "Solidity", icon: <SiSolidity className="text-gray-700" /> },
     { name: "React.js", icon: <FaReact className="text-sky-500" /> },
     { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
     { name: "Express.js", icon: <span className="font-bold"></span> },
     { name: "Mongoose", icon: <SiMongodb className="text-green-700" /> },
-    { name: "JWT", icon: <span className="font-bold"></span> },
-    { name: "Bcrypt", icon: <span className="font-bold"></span> },
     { name: "Web3.js", icon: <span className="font-bold"></span> },
-    { name: "Blockchain", icon: <span className="font-bold">⛓️</span> },
+    // { name: "Blockchain", icon: <span className="font-bold">⛓️</span> },
+  ];
+  const Row = [{ name: "Web3.js", icon: <span className="font-bold"></span> },
+    // { name: "Blockchain", icon: <span className="font-bold">⛓️</span> },
     { name: "Django", icon: <SiDjango className="text-green-800" /> },
     { name: "Flask", icon: <SiFlask className="text-gray-800" /> },
     { name: "REST APIs", icon: <span className="font-bold">🔗</span> },
@@ -38,10 +39,12 @@ export default function TechStack() {
     // { name: "GitHub", icon: <FaGitAlt className="text-red-600" /> },
     // { name: "VS Code", icon: <span className="font-bold"></span> },
     { name: "Linux", icon: <span className="font-bold">🐧</span> },
-    { name: "Chrome DevTools", icon: <span className="font-bold">🛠️</span> },
+    // { name: "Chrome DevTools", icon: <span className="font-bold"></span> },
     // { name: "regex", icon: <span className="font-bold">.*</span> },
-
-  ];
+    { name: "Tailwind CSS", icon: <span className="font-bold"></span> },
+    
+  
+  ]
 
   return (
     <>
@@ -61,7 +64,7 @@ export default function TechStack() {
           {tech.map((t, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[-2deg] hover:rotate-0 transition duration-300"
+              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[-2deg] hover:rotate-0 transition duration-30"
             >
               <span className="text-2xl">{t.icon}</span>
               <span>{t.name}</span>
@@ -71,7 +74,7 @@ export default function TechStack() {
       </div>
 
       {/* Duplicate row for seamless loop */}
-      <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl mt-4">
+      {/* <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl mt-4">
         <div className="animate-marquee2 whitespace-nowrap flex items-center gap-10 py-6">
           {tech.map((t, i) => (
             <div
@@ -83,7 +86,24 @@ export default function TechStack() {
             </div>
           ))}
         </div>
+      </div> */}
+
+      
+      {/* 2nd duplicate  */}
+      <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-10 py-6">
+          {Row.map((t, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[-2deg] hover:rotate-0 transition duration-300"
+            >
+              <span className="text-2xl">{t.icon}</span>
+              <span>{t.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
+      
 
       {/* Animations */}
       <style jsx>{`

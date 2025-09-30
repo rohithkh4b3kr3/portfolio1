@@ -8,7 +8,7 @@ export default function About() {
     >
       {/* Header like newspaper title */}
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-2 mb-12 tracking-tight">
-        #Special Edition
+        #KNOW ME BETTER
       </h2>
 
       {/* Floating hashtags like random newspaper cutouts */}
@@ -65,7 +65,7 @@ export default function About() {
           <p className="text-lg leading-relaxed">
             By daylight:{" "}
             <span className="font-bold">Fullstack Developer</span>. By moonlight:{" "}
-            <span className="font-bold">Blockchain Wizard</span>. Summoning smart contracts, with a special skill: generating bugs faster than deadlines.
+            <span className="font-bold">Blockchain Rookie </span>Summoning smart contracts, with a special skill: generating bugs faster than deadlines.
           </p>
         </article>
 
@@ -84,7 +84,9 @@ export default function About() {
           </p>
         </article>
       </div>
+      {/* Long Div */}
 
+      
       {/* Animations */}
       <style jsx>{`
         @keyframes floatRotate {

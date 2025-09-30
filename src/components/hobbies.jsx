@@ -55,7 +55,7 @@ export default function Hobbies() {
               animationDelay: `${Math.random() * 10}s`,
             }}
           >
-            {["FUN", "RELAX", "TRENDING", "SNIPPET"][i % 4]}
+            {["FUN"][i % 4]}
           </span>
         ))}
       </div>
