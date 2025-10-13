@@ -55,7 +55,7 @@ export default function TechStack() {
     >
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-2 mb-12 tracking-tight">
-        Tech Classifieds
+        #Tech Classifieds
       </h2>
 
       {/* Moving ticker */}

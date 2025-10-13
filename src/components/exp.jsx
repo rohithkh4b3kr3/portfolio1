@@ -15,7 +15,7 @@ export default function ExperienceProjects() {
       {/* Grid layout like news columns */}
       <div className="grid md:grid-cols-2 gap-8 relative z-10">
         {/* ===== EXPERIENCE ===== */}
-        <article className="border-2 border-black bg-white p-6 shadow-md hover:scale-[1.01] transform transition duration-500 rotate-[-1deg]">
+    <article className="border-2 border-black bg-pink-100 p-6 shadow-md hover:scale-[1.01] transform transition duration-500 rotate-[-1deg]">
           <h3 className="text-2xl font-black uppercase border-b-2 border-black pb-2 mb-4">
             Senior Developer  
             <span className="block text-sm normal-case font-normal italic">
@@ -73,7 +73,7 @@ export default function ExperienceProjects() {
           </ul>
         </article>
 
-        <article className="border-2 border-black bg-neutral-100 p-6 shadow-lg hover:scale-[1.02] transform transition duration-500 rotate-[-1deg]">
+        <article className="border-2 border-black bg-pink-100 p-6 shadow-lg hover:scale-[1.02] transform transition duration-500 rotate-[-1deg]">
           <h3 className="text-2xl font-black uppercase border-b-2 border-black pb-2 mb-4">
             Event Booking Platform
           </h3>

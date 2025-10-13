@@ -29,7 +29,7 @@ export default function Contact() {
       className="max-w-5xl mx-auto px-6 py-16 font-serif bg-neutral-50 text-black relative"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-4 mb-12 tracking-tight">
-        Contact & Connect
+        #Contact & Connect
       </h2>
 
       <div className="flex flex-col md:flex-row justify-around gap-12">

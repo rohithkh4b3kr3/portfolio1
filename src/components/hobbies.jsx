@@ -20,7 +20,7 @@ export default function Hobbies() {
       className="max-w-6xl mx-auto px-6 py-16 font-serif bg-neutral-50 text-black relative overflow-hidden"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-4 mb-12 tracking-tight">
-        What I Enjoy
+        #What I Enjoy
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8 relative z-10">
