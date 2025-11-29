@@ -1,7 +1,5 @@
-
-
 import React, { useState, useEffect } from "react";
-import '../components/app.css';
+import "../components/app.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +20,13 @@ export default function Navbar() {
 
   // Detect scroll to highlight active section
   useEffect(() => {
-    const sections = ["about", "tech", "hobbies", "contact"];
+    const sections = [
+      "about",
+      "workexp",
+      "techstack",
+      "hobbies",
+      "contact",
+    ]; // 👈 Added workexp here
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight / 3;
       for (let sec of sections) {
@@ -36,17 +40,30 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Updated navbar links (includes Work Experience)
   const links = [
     { id: "about", label: "ABOUT" },
+    { id: "workexp", label: "WORK EXPERIENCE" }, // ✅ New section added
     { id: "techstack", label: "TECH SECTION" },
     { id: "hobbies", label: "HOBBIES" },
     { id: "contact", label: "CONTACT" },
   ];
 
   const hashtags = [
-    "#WebDev", "#React", "#Portfolio", "#JavaScript", "#NodeJS",
-    "#Frontend", "#Backend", "#FullStack", "#Developer",
-    "#OpenSource", "#WEB3", "#SOLIDITY", "#ETHEREUM", "#Blockchain",
+    "#WebDev",
+    "#React",
+    "#Portfolio",
+    "#JavaScript",
+    "#NodeJS",
+    "#Frontend",
+    "#Backend",
+    "#FullStack",
+    "#Developer",
+    "#OpenSource",
+    "#WEB3",
+    "#SOLIDITY",
+    "#ETHEREUM",
+    "#Blockchain",
   ];
 
   const scrollToSection = (id) => {
@@ -58,7 +75,6 @@ export default function Navbar() {
   return (
     <nav className="border-y-4 border-black bg-amber-100 relative overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-4 font-serif">
-        
         {/* Name Typing */}
         <div className="text-3xl md:text-4xl font-extrabold tracking-wide mb-4 md:mb-0">
           <span className="border-b-2 border-black pr-1">{displayedText}</span>
@@ -109,7 +125,9 @@ export default function Navbar() {
       <div className="border-t-2 border-black bg-amber-200 overflow-hidden">
         <div className="whitespace-nowrap animate-marquee py-2 text-sm font-semibold text-gray-700">
           {hashtags.map((tag, i) => (
-            <span key={i} className="mx-6">{tag}</span>
+            <span key={i} className="mx-6">
+              {tag}
+            </span>
           ))}
         </div>
       </div>

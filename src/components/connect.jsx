@@ -26,7 +26,7 @@ export default function Contact() {
     
     <section
       id="contact"
-      className="max-w-5xl mx-auto px-6 py-16 font-serif bg-neutral-50 text-black relative"
+      className="max-w-5xl mx-auto px-6 py-16 font-serif text-black relative"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-4 mb-12 tracking-tight">
         #Contact & Connect

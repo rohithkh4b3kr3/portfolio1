@@ -4,7 +4,7 @@ import About from './components/About';
 import TechStack from './components/Tech';
 import Hobbies from './components/hobbies';
 import Contact from './components/connect';
-
+// import { Analytics } from "@vercel/analytics/next"
 function App() {
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
       <TechStack />
       <Hobbies />
       <Contact />
+      {/* <Analytics/> */}
     </>
   );
 }

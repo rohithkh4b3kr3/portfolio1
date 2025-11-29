@@ -17,7 +17,7 @@ export default function Hobbies() {
   return (
     <section
       id="hobbies"
-      className="max-w-6xl mx-auto px-6 py-16 font-serif bg-neutral-50 text-black relative overflow-hidden"
+      className="max-w-6xl mx-auto px-6 py-16 font-serif text-black relative overflow-hidden"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-4 mb-12 tracking-tight">
         #What I Enjoy

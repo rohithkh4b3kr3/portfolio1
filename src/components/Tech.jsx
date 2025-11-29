@@ -7,133 +7,119 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
+  FaDocker,
+  FaAws,
 } from "react-icons/fa";
-import { SiTypescript, SiSolidity, SiMongodb, SiFlask, SiNextdotjs, SiDjango, SiPostgresql } from "react-icons/si";
+import {
+  SiTypescript,
+  SiSolidity,
+  SiMongodb,
+  SiFlask,
+  SiNextdotjs,
+  SiDjango,
+  SiPostgresql,
+  SiKubernetes,
+  SiJenkins,
+  SiVercel,
+  SiNetlify,
+  SiEthers,
+} from "react-icons/si";
 
 export default function TechStack() {
-  const tech = [
+  const webDev = [
     { name: "JavaScript (ES6+)", icon: <FaReact className="text-sky-500" /> },
-    { name: "Python", icon: <FaPython className="text-yellow-500" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
-    { name: "C", icon: <span className="font-bold"></span> },
-    { name: "SQL", icon: <span className="font-bold"></span> },
+    { name: "Python", icon: <FaPython className="text-yellow-500" /> },
     { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
-    { name: "CSS", icon: <FaCss3Alt className="text-blue-600" /> },
-    { name: "Solidity", icon: <SiSolidity className="text-gray-700" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
     { name: "React.js", icon: <FaReact className="text-sky-500" /> },
     { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-    { name: "Express.js", icon: <span className="font-bold"></span> },
-    { name: "Mongoose", icon: <SiMongodb className="text-green-700" /> },
-    { name: "Web3.js", icon: <span className="font-bold"></span> },
-    // { name: "Blockchain", icon: <span className="font-bold">⛓️</span> },
-  ];
-  const Row = [{ name: "Web3.js", icon: <span className="font-bold"></span> },
-    // { name: "Blockchain", icon: <span className="font-bold">⛓️</span> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-700" /> },
     { name: "Django", icon: <SiDjango className="text-green-800" /> },
     { name: "Flask", icon: <SiFlask className="text-gray-800" /> },
-    { name: "REST APIs", icon: <span className="font-bold">🔗</span> },
-    // { name: "Figma", icon: <span className="font-bold">🎨</span> },
-    { name: "Postman", icon: <span className="font-bold">📮</span> },
     { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
-    // { name: "GitHub", icon: <FaGitAlt className="text-red-600" /> },
-    // { name: "VS Code", icon: <span className="font-bold"></span> },
-    { name: "Linux", icon: <span className="font-bold">🐧</span> },
-    // { name: "Chrome DevTools", icon: <span className="font-bold"></span> },
-    // { name: "regex", icon: <span className="font-bold">.*</span> },
-    { name: "Tailwind CSS", icon: <span className="font-bold"></span> },
-    
-  
-  ]
+  ];
+
+  const web3 = [
+    { name: "Solidity", icon: <SiSolidity className="text-gray-700" /> },
+    { name: "Hardhat", icon: <span className="font-bold text-yellow-500"></span> },
+    { name: "Ethers.js", icon: <SiEthers className="text-purple-600" /> },
+    { name: "Web3.js", icon: <span className="font-bold text-yellow-600"></span> },
+    { name: "Smart Contracts", icon: <span className="font-bold text-indigo-600"></span> },
+  ];
+
+  const devops = [
+    { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+    { name: "Kubernetes", icon: <SiKubernetes className="text-blue-600" /> },
+    { name: "CI/CD (Jenkins)", icon: <SiJenkins className="text-red-500" /> },
+    { name: "AWS", icon: <FaAws className="text-orange-500" /> },
+    { name: "Vercel", icon: <SiVercel className="text-black" /> },
+    { name: "Netlify", icon: <SiNetlify className="text-teal-500" /> },
+  ];
+
+  const TickerRow = ({ items, reverse }) => {
+    const duplicated = [...items, ...items];
+
+    return (
+      <div className="relative overflow-hidden w-full border-y-4 border-black bg-white shadow-xl mb-6">
+        <div
+          className={`flex gap-10 py-6 whitespace-nowrap ${
+            reverse ? "ticker-reverse" : "ticker"
+          }`}
+        >
+          {duplicated.map((t, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 text-lg font-bold px-5 py-3 rounded-xl border-2 border-black bg-white/80 backdrop-blur-md shadow-xl hover:scale-110 transition-all duration-300"
+            >
+              <span className="text-3xl">{t.icon}</span>
+              <span>{t.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
-    {/* <Navbar /> */}
-    <section
-      id="techstack"
-      className="max-w-6xl mx-auto px-6 py-16 font-serif bg-neutral-50 text-black relative overflow-hidden"
-    >
-      {/* Section Title */}
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-2 mb-12 tracking-tight">
-        #Tech Classifieds
-      </h2>
+      <section id="techstack" className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-5xl font-extrabold text-center uppercase border-b-4 border-black pb-4 mb-14">
+          #Tech Stack
+        </h2>
 
-      {/* Moving ticker */}
-      <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-10 py-6">
-          {tech.map((t, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[-2deg] hover:rotate-0 transition duration-30"
-            >
-              <span className="text-2xl">{t.icon}</span>
-              <span>{t.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+        <h3 className="text-2xl font-bold mb-4 text-center uppercase">Web Dev</h3>
+        <TickerRow items={webDev} />
 
-      {/* Duplicate row for seamless loop */}
-      {/* <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl mt-4">
-        <div className="animate-marquee2 whitespace-nowrap flex items-center gap-10 py-6">
-          {tech.map((t, i) => (
-            <div
-              key={`dup-${i}`}
-              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[2deg] hover:rotate-0 transition duration-300"
-            >
-              <span className="text-2xl">{t.icon}</span>
-              <span>{t.name}</span>
-            </div>
-          ))}
-        </div>
-      </div> */}
+        <h3 className="text-2xl font-bold mb-4 text-center uppercase">Web3 & Blockchain</h3>
+        <TickerRow items={web3} reverse />
 
-      
-      {/* 2nd duplicate  */}
-      <div className="relative overflow-hidden border-y-4 border-black bg-white shadow-xl">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-10 py-6">
-          {Row.map((t, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3 text-lg font-bold border-2 border-black px-4 py-2 bg-neutral-100 shadow-md transform rotate-[-2deg] hover:rotate-0 transition duration-300"
-            >
-              <span className="text-2xl">{t.icon}</span>
-              <span>{t.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      
+        <h3 className="text-2xl font-bold mb-4 text-center uppercase">DevOps</h3>
+        <TickerRow items={devops} />
+      </section>
 
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        @keyframes marquee2 {
-          0% {
-            transform: translateX(100%);
-          }
-          100% {
-            transform: translateX(0%);
-          }
+        @keyframes scroll-reverse {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
         }
-        .animate-marquee {
-          display: inline-flex;
-          animation: marquee 35s linear infinite;
+        .ticker {
+          animation: scroll 25s linear infinite;
+          will-change: transform;
         }
-        .animate-marquee2 {
-          display: inline-flex;
-          animation: marquee2 35s linear infinite;
+        .ticker-reverse {
+          animation: scroll-reverse 25s linear infinite;
+          will-change: transform;
         }
       `}</style>
-    </section>
-    <ExperienceProjects/>
+
+      <ExperienceProjects />
     </>
   );
 }
